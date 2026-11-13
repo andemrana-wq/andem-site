@@ -120,8 +120,7 @@ button {
   align-items: center;
   gap: clamp(14px, 2vw, 24px);
   padding: 7px 12px;
-  border-radius: 0 0 8px 8px;
-  background: #7041a6;
+  background: transparent;
 }
 
 .header-contact a {
@@ -2039,11 +2038,11 @@ button {
   }
 
   .header-contact {
-    width: auto;
+    width: 100%;
     justify-content: center;
     gap: 8px 14px;
     padding: 6px 10px;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0;
     flex-wrap: wrap;
   }
 
