@@ -398,7 +398,10 @@ function AdminPage({ content, onAdd, onUpdate, onDelete, onReset, storageMessage
         email: email.trim(),
         password,
       })
-      if (error) setAuthError('Giriş başarısız. E-posta ve şifrenizi kontrol edin.')
+      if (error) {
+        console.error('Supabase yönetici girişi başarısız oldu.', error)
+        setAuthError(`Giriş başarısız: ${error.message}`)
+      }
     } catch (error) {
       console.error('Supabase yönetici girişi başarısız oldu.', error)
       setAuthError('Giriş sırasında bağlantı hatası oluştu. Lütfen tekrar deneyin.')
